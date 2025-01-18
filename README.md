@@ -5,6 +5,7 @@
 1. [Levantamento de Requisitos](#levantamento-de-requisitos)
 2. [Diagramas](#diagramas)
    - [Diagrama de Caso de Uso](#diagrama-de-caso-de-uso)
+      - [Estrutura de Especificação de Casos de Uso](#estrutura-de-especificação-de-casos-de-uso)
 
 <br>
 
@@ -51,5 +52,91 @@
 
 ## Diagramas
 
-### **Diagrama de Caso de Uso**
+### Diagrama de Caso de Uso
 ![Diagrama de Caso de Uso](./Diagramas/Caso_de_Uso.jpg)
+
+---
+
+#### Estrutura de Especificação de Casos de Uso
+**Identificador:** UC -
+
+**Nome:** Registrar Pagamentos
+
+**Objetivo:** Permitir que o pagamento seja realizado diretamente pelo aluno, ou sendo intermediário pelo atendente, com o sistema processando e atualizando o status.
+
+**Atores:**
+- Primário: Atendente, Aluno
+- Secundário: Sistema
+
+**Pré-condições:**
+- O aluno deve estar cadastrado no sistema
+- O aluno deve possuir mensalidades pendentes em aberto
+
+**Cenários:**
+- **Fluxo Principal:**
+   1.	O aluno acessa no app/site as credenciais validas.
+   2.	O aluno abre a aba de mensalidades.
+   3.	O aluno seleciona a mensalidade que falta quitar.
+   4.	O sistema exibe as informações da forma de pagamento (PIX, BOLETO, CARTÃO DE CRÉDITO/DÉBITO).
+   5.	O aluno/atendente confirma o pagamento.
+   6.	O sistema registra o pagamento e atualiza o status financeiro.
+   7.	O sistema libera o acesso dos recursos da academia.
+- **Fluxo Alternativo (1):** Atendente realizando o registro do pagamento.
+   - a.	O atendente acessa o sistema desktop com suas credenciais validas.
+   - b.	O atendente localiza o aluno pelo CPF ou ID.
+   - c.	O atendente seleciona a mensalidade que falta quitar.
+   - d.	O sistema exibe as informações da forma de pagamento (PIX, BOLETO, CARTÃO DE CRÉDITO/DÉBITO, DINHEIRO).
+   - e.	Prosseguir no passo 5 do fluxo principal
+- **Fluxo de Exceção (5):** O aluno escolheu a opção de boleto.
+   - a.	O sistema aguardará até o pagamento ser finalizado.
+   - b.	Prosseguir para o passo 7 do fluxo principal depois da aprovação do boleto.
+- **Fluxo de Exceção (5):** As credenciais do pagamento incorreto.
+   - a.	Se o aluno possuir outra forma de pagamento, prosseguir no passo 4 do fluxo principal.
+
+**Pós-condições:**
+- O sistema registrou o pagamento com sucesso.
+- O aluno receberá acesso aos recursos da academia.
+- O sistema atualizará o status financeiro do aluno.
+
+---
+
+**Identificador:** UC -
+
+**Nome:** Agendar Avaliação Técnica
+
+**Objetivo:** Permitir que o aluno possa agendar sua avaliação técnica e visualizar no sistema.
+
+**Atores:**
+- Primário: Aluno
+- Secundário: Sistema, Professor
+
+**Pré-condições:**
+- O aluno deve estar cadastrado no sistema.
+- O professor deve estar cadastrado no sistema com o seu horário de trabalho definido.
+
+**Cenários:**
+- **Fluxo Principal:**
+   1.	O aluno acessa o sistema (app/site) com credenciais validas.
+   2.	O aluno abre a funcionalidade de “Agendar Avaliação Técnica”.
+   3.	O sistema exibe os professes disponíveis, seus horários e datas.
+   4.	O aluno seleciona o professor, horário e data disponível.
+   5.	O sistema confirma o agendamento e notifica o professor.
+   6.	No dia marcado, o aluno comparece na academia para a avaliação técnica.
+   7.	O sistema mostra para o professor os alunos que tem para a avaliação do dia.
+   8.	O professor seleciona o aluno e insere as informações das medidas no sistema.
+   9.	O sistema registra as medições e atualiza no histórico.
+   10. O aluno pode visualizar a avaliação pelo app/site
+- **Fluxo Alternativo (3):** Não encontra professor disponível.
+   - a.	O sistema envia uma mensagem ao aluno que não possui horário no momento
+- **Fluxo de Exceção (5):** O sistema verifica novamente e não há disponibilidade.
+   - a.	O sistema envia uma mensagem de indisponibilidade do professor.
+   - b.	Prosseguir para o passo 3 do Fluxo Principal.
+- **Fluxo de Exceção (6):** O aluno não compareceu na avaliação.
+   - a.	O sistema registra o não comparecimento, caso tenha motivo, registrar o motivo e mantém o histórico atualizado para controle.
+- **Fluxo de Exceção (2):** O aluno cancela a avaliação.
+   - a.	Caso o aluno possui avaliação, o sistema exibirá somente a avaliação e não permitirá que marque uma avaliação.
+   - b.	O aluno cancela a avaliação.
+
+**Pós-condições:**
+- Os resultados da avaliação técnica são registrados e vinculados com o histórico do aluno.
+- O professor tem controle das avaliações realizadas para futuras análises.
