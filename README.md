@@ -53,7 +53,7 @@
 ## Diagramas
 
 ### Diagrama de Caso de Uso
-![Diagrama de Caso de Uso](./Diagramas/Caso_de_Uso.jpg)
+![Diagrama de Caso de Uso](./Diagramas/Diagrama%20de%20Casos%20de%20Uso.jpg)
 
 ---
 
@@ -140,3 +140,6 @@
 **Pós-condições:**
 - Os resultados da avaliação técnica são registrados e vinculados com o histórico do aluno.
 - O professor tem controle das avaliações realizadas para futuras análises.
+
+### Diagrama de Classes
+![Diagrama de Classes](./Diagramas/Diagrama%20de%20Classes.jpg)
