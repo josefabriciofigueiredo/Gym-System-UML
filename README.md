@@ -6,6 +6,8 @@
 2. [Diagramas](#diagramas)
    - [Diagrama de Caso de Uso](#diagrama-de-caso-de-uso)
       - [Estrutura de Especificação de Casos de Uso](#estrutura-de-especificação-de-casos-de-uso)
+   - [Diagrama de Atividades](#diagrama-de-atividades)
+   - [Diagrama de Classes](#diagrama-de-classes)
 
 <br>
 
@@ -140,6 +142,9 @@
 **Pós-condições:**
 - Os resultados da avaliação técnica são registrados e vinculados com o histórico do aluno.
 - O professor tem controle das avaliações realizadas para futuras análises.
+
+### Diagrama de Atividades
+![Diagrama de Atividades](./Diagramas/Diagrama%20de%20Atividades.jpg)
 
 ### Diagrama de Classes
 ![Diagrama de Classes](./Diagramas/Diagrama%20de%20Classes.jpg)
