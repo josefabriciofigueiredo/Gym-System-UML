@@ -8,6 +8,7 @@
       - [Estrutura de Especificação de Casos de Uso](#estrutura-de-especificação-de-casos-de-uso)
    - [Diagrama de Atividades](#diagrama-de-atividades)
    - [Diagrama de Classes](#diagrama-de-classes)
+   - [Diagrama de Máquina de Estado](#Diagrama-de-Máquina-de-Estado)
 
 <br>
 
@@ -148,3 +149,12 @@
 
 ### Diagrama de Classes
 ![Diagrama de Classes](./Diagramas/Diagrama%20de%20Classes.jpg)
+
+### Diagrama de Máquina de Estado
+![Diagrama de Máquina de Estado-01](./Diagramas/Diagrama%20de%20Máquina%20de%20Estado-01.jpg)
+
+![Diagrama de Máquina de Estado-02](./Diagramas/Diagrama%20de%20Máquina%20de%20Estado-02.jpg)
+
+![Diagrama de Máquina de Estado-03](./Diagramas/Diagrama%20de%20Máquina%20de%20Estado-03.jpg)
+
+![Diagrama de Máquina de Estado-04](./Diagramas/Diagrama%20de%20Máquina%20de%20Estado-04.jpg)
