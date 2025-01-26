@@ -9,7 +9,8 @@
    - [Diagrama de Atividades](#diagrama-de-atividades)
    - [Diagrama de Classes](#diagrama-de-classes)
    - [Diagrama de Máquina de Estado](#diagrama-de-máquina-de-estado)
-   - [Diagrama de Sequência](#diagramasde-sequência)
+   - [Diagrama de Sequência](#diagrama-de-sequência)
+   - [Diagrama de Pacote](#diagrama-de-pacote)
 
 <br>
 
@@ -175,3 +176,6 @@
 ![Diagrama de Sequência-06](./Diagramas/Diagrama%20de%20Sequência-06.jpg)
 
 ![Diagrama de Sequência-07](./Diagramas/Diagrama%20de%20Sequência-07.jpg)
+
+### Diagrama de Pacote
+![Diagrama de Pacote](./Diagramas/Diagrama%20de%20Pacote.jpg)
